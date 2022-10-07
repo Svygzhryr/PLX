@@ -44,17 +44,17 @@ body {
 }
 
 .layers__middle {
-  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-  z-index: 4;
+  transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  z-index: 2;
 }
 
 .layers__front {
-  transform: translate3d(0, calc(var(--scrollTop) / 10), 0);
+  transform: translate3d(0, calc(var(--scrollTop) / 8), 0);
   z-index: 5;
 }
 
 .layer__header {
-  z-index: 2;
+  z-index: 5;
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
 
 }
