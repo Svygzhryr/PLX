@@ -10,6 +10,28 @@
   --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #e5da9e #08100f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #08100f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e5da9e;
+  border-radius: 10px;
+  border: 0px solid #ffffff;
+}
+
 body {
   background-color: #010101;
   color: white;
