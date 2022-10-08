@@ -6,29 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="/libs/gsap/gsap.min.js" defer></script>
+    <script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
     <script src="./js/app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="layers">
-            <div class="layer__header">
-                <div class="layers__caption">Witness Wonder</div>
-                <div class="layers__title">The Magic Forest</div>
-            </div>
-            <div class="layer layers__base" style="background-image: url(./img/main.png)"></div>
-            <div class="layer layers__middle" style="background-image: url(./img/middle.png)"></div>
-            <div class="layer layers__front" style="background-image: url(./img/front.png)"></div>
+    <div class="wrapper">
+        <div class="container">
+            <header class="main-header">
+                <div class="layers">
+                    <div class="layer__header">
+                        <div class="layers__caption">Witness Wonder</div>
+                        <div class="layers__title">The Magic Forest</div>
+                    </div>
+                    <div class="layer layers__base" style="background-image: url(./img/main.png)"></div>
+                    <div class="layer layers__middle" style="background-image: url(./img/middle.png)"></div>
+                    <div class="layer layers__front" style="background-image: url(./img/front.png)"></div>
+                </div>
+            </header>
+        
+            <article class="main-article" style="background-image: url(./img/dungeon.jpg);">
+                <div class="main-article__content">
+                    <h2 class="main-article__header">The Causality</h2>
+                    <p class="main-article__text">In this world, is the destiny of mankind controlled by some transcendental entity or law? Is it like the hand of God hovering above? At least it is true that man has no control; even over his own will.</p>
+                </div>
+            </article>
         </div>
-    </header>
-
-    <article class="main-article" style="background-image: url(./img/dungeon.jpg);">
-        <div class="main-article__content">
-            <h2 class="main-article__header">The Causality</h2>
-            <p class="main-article__text">In this world, is the destiny of mankind controlled by some transcendental entity or law? Is it like the hand of God hovering above? At least it is true that man has no control; even over his own will.</p>
-        </div>
-    </article>
+    </div>
     
 </body>
 </html>

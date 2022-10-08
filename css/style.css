@@ -7,6 +7,7 @@
 
 :root {
   --index: calc(1vw + 1vh);
+  --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
 body {
@@ -24,6 +25,11 @@ body {
   position: absolute;
   z-index: 100;
   width: 100%;
+  height: calc(var(--index) * 10);
+  background-image: url(../img/ground.png);
+  background-size: cover;
+  background-position: center;
+  bottom: calc(var(--index) * -4.5);
 }
 
 .layers {
@@ -47,6 +53,7 @@ body {
   background-repeat: no-repeat;
   will-change: transform;
   z-index: 2;
+  transition: var(--transition);
 }
 
 .layers__base {
@@ -71,6 +78,7 @@ body {
   margin-top: calc(var(--index) * -2);
   color: #e7e7e0;
   text-shadow: 0 0 1.5rem #8d6d29;
+  transition: var(--transition);
 }
 
 .layers__caption {
@@ -87,4 +95,33 @@ body {
 
 .main-article {
   min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #e7e7e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-article__header {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: calc(var(--index) * 1.8);
+  letter-spacing: calc(var(--index) / 1.8);
+  text-align: center;
+  will-change: transform;
+  transform: translate3d(0, calc(var(--scrollTop) / -12), 0);
+}
+
+.main-article__text {
+  max-width: calc(var(--index) * 50);
+  font-size: calc(var(--index) * 1);
+  text-align: center;
+  font-family: berserk;
+  transform: translate3d(0, calc(var(--scrollTop) / -12), 0);
+  will-change: transform;
+}
+
+.content {
+  will-change: transform;
 }
