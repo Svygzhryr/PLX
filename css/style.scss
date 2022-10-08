@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
 
 @font-face {
     font-family: berserk;
     src: url(../fonts/berserk.ttf);
+}
+
+:root {
+    --index: calc(1vw + 1vh);
 }
 
 body {
@@ -14,6 +18,14 @@ body {
 
 .main-header {
     position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 100;
+
+        width: 100%;
+    }
 }
 
 .layers {
@@ -25,7 +37,7 @@ body {
     text-align: center;
 
     font-size: 8rem;
-    font-family: Alkalami;
+    font-family: Raleway;
 
     overflow: hidden;
     position: relative;
@@ -59,7 +71,30 @@ body {
 }
 
 .layer__header {
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
     z-index: 1;
+    will-change: transform;
+    text-transform: uppercase;
+
+    font-family: Raleway;
+    margin-top: calc(var(--index) * -2);
+
+    color: #e7e7e0;
+
+    text-shadow: 0 0 1.5rem #8d6d29;
+}
+
+.layers__caption {
+    font-weight: 700;
+    font-size: calc(var(--index) * 1.175);
+    letter-spacing: calc(var(--index) / 3);
+
+}
+
+.layers__title {
+    font-weight: 900;
+    font-size: calc(var(--index) * 2.5);
+    letter-spacing: calc(var(--index) / 10);
 }
 
 .main-article {
